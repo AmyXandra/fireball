@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+    <title>Gradient Generator</title>
+</head><style>
+        body{
+            background: linear-gradient(to right, red, yellow);
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+<body id="bodyColor">
+    
+    <div>
+        <h1>Gradient Generator</h1>
+        <input type="color" class="color1" name="color1" value="#00ff00">
+        <input type="color" class="color2" name="color2" value="#ff0000">
+        <h2>Current CSS Background</h2>
+        <h3></h3>
+    </div>
+    <script>
+        var css = document.querySelector("h3")
+        var color1 = document.querySelector(".color1");
+        var color2 = document.querySelector(".color2");
+        var body = document.getElementById("bodyColor");
+
+        function gradientListener(){
+            console.log(color1.value);
+            body.style.background = "linear-gradient(to right, "+ color1.value +", "+ color2.value +")";
+
+            css.innerHTML = body.style.background + ";";
+        }
+        color1.addEventListener("input", gradientListener);
+
+        color2.addEventListener("input", gradientListener);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <h5>Enter Value</h5>
+        <button id="add" onclick="mathSolve('add')">Add</button>
+        <button id="subtract" onclick="mathSolve('subtract')">Subtract</button>
+        <button id="divide" onclick="mathSolve('divide')">Divide</button>
+        <p id="ans"></p>
+    </div>
+    <script>
+        var firstNumber = prompt("provide first number");
+        var secondNumber = prompt("provide second number");
+        var x = parseInt(firstNumber);
+        var y = parseInt(secondNumber);
+
+        function mathSolve(operation){
+            switch (operation){
+                case "add":
+                // console.log("boo yea");
+                document.getElementById("ans").innerHTML = x + y;
+                break;
+
+
+                case "subtract":
+                // console.log("boo yea");
+                document.getElementById("ans").innerHTML = x - y;
+                break;
+
+                case "divide":
+                // alert("yea right!");
+                document.getElementById("ans").innerHTML = x / y;
+                break;
+            }
+            
+        }
+        function mathAdd(firstNumber, secondNumber){
+            alert("yea right!");
+                console.log("boo yea");
+                document.getElementById("ans").innerHTML = x + y;
+        }
+    </script>
+
+</body>
+</html>
